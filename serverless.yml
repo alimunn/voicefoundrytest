@@ -1,0 +1,32 @@
+service: voicefoundrytest
+
+plugins:
+  - serverless-s3-sync
+
+custom:
+  s3:
+    bucketName: voicefoundrytest-bucket-985461
+  s3Sync:
+    - bucketName: ${self:custom.s3.bucketName}
+      localDir: UploadData
+  
+provider:
+  name: aws
+  runtime: python3.8
+  profile: default
+  region: eu-west-2
+
+functions:
+  hello:
+    handler: handler.hello
+    events:
+      - http:
+          path: hello
+          method: get
+
+resources:
+  Resources:
+    UploadBucket:
+      Type: "AWS::S3::Bucket"
+      Properties:
+        BucketName: ${self:custom.s3.bucketName}

@@ -1,0 +1,23 @@
+{
+  "name": "voicefoundrytest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "handler.py",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alimunn/voicefoundrytest.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alimunn/voicefoundrytest/issues"
+  },
+  "homepage": "https://github.com/alimunn/voicefoundrytest#readme",
+  "dependencies": {
+    "serverless-s3-sync": "^1.10.4"
+  }
+}
