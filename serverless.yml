@@ -52,7 +52,7 @@ functions:
     events:
       - http:
           path: s3toDynamo
-          method: post
+          method: get
 
 # s3 and DynamoDB information for CloudFormation
 resources:
